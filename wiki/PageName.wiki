@@ -1,0 +1,45 @@
+#summary ImageBam API vs2 Authentication
+#labels Featured
+= Authenticating your Application =
+
+== Introduction ==
+
+It takes a couple steps to authenticate your application. 
+
+Please read following guide provided by OAuth before continuing: http://oauth.net/core/1.0a/
+
+
+== API Registration ==
+First of all you will need to register your application with ImageBam.
+_The URL wil be provided once the API goes live._
+Once you registered your application you will get an email containing:
+  * your API-key
+  * your API-secret
+  * additional information
+
+
+
+== General Information ==
+All parameters can either be sent via *GET* or *POST*. Please note that most parameters are case-sensitive.
+
+
+
+== Signing Requests ==
+Currently only *MD5* is accepted as signing method.
+{{{
+oauth_signature_method=MD5
+}}}
+The signature is calculated out of following parameters:
+  * API-key
+  * API-secret
+  * oauth_timestamp
+  * oauth_nonce
+
+The oauth_signature is build by concatenating the parameters above in the given order and then calculating the MD5-checksum of the string.
+{{{
+oauth_signature = MD5(API-key + API-secret + oauth_timestamp + oauth_nonce)
+}}}
+
+
+----
+more information will be posted at a later point of time
