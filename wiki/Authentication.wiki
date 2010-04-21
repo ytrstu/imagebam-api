@@ -144,5 +144,29 @@ oauth_token_secret      RH58X8vRXF7GXKe9
 
 If the parameters are not correct you will receive sufficient information in order to address the error.
 
+== Accessing Protected Resources ==
+
+You now have access to the user's 'protected resources' and are able to do following:
+  * upload images
+  * generate a new gallery ID
+  * request list of available galleries
+
+If needed following functionalities might be included in the future:
+  * delete images
+  * delete galleries
+  * change title and description of galleries
+  * get a list of images stored in the user's account 
+
+With each request following parameters must be passed along:
+  * oauth_consumer_key
+  * oauth_token
+  * oauth_signature_method
+  * oauth_signature
+  * oauth_timestamp
+  * oauth_nonce
+
+Depending on the resource additional parameters might be required.
+
+
 ----
 more information will be posted at a later point of time
