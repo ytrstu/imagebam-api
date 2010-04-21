@@ -166,7 +166,3 @@ With each request following parameters must be passed along:
   * oauth_nonce
 
 Depending on the resource additional parameters might be required.
-
-
-----
-more information will be posted at a later point of time
