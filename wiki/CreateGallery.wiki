@@ -27,7 +27,7 @@ Parameters:
   * oauth_signature
   * oauth_timestamp
   * oauth_nonce
-  * response_format
+  * response_format _(optional, default: JSON)_
   * title _(optional)_
   * description _(optional)_
   
