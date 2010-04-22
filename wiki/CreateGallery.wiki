@@ -50,8 +50,9 @@ Example *JSON* Response:
           "stat": "ok", 
            "gallery": {
                     "GID":"asdfqwertzuiqwerasdfqwertzuiqwer",
-                     "title":"This is just an example title.",
-                     "description":"This is just an example description."
+                    "URL":"http://www.imagebam.com/gallery/asdfqwertzuiqwerasdfqwertzuiqwer",
+                    "title":"This is just an example title.",
+                    "description":"This is just an example description."
            }
      }
 }
