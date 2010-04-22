@@ -13,8 +13,8 @@ A gallery must be created before images can be added to it.
 
 Each gallery has the following parameters:
   * GID
-  * title (max. length 100 characters)
-  * description (max. length 500 characters)
+  * title (max. length 100 characters, no HTML)
+  * description (max. length 500 characters, no HTML)
   
 
 Certain special characters are automatically removed from the *title* and *description*.
