@@ -14,9 +14,10 @@ A gallery must be created before images can be added to it.
 Each gallery has the following parameters:
   * GID
   * title (max. length 100 characters)
+  * description (max. length 500 characters)
   
 
-Certain special characters are automatically removed from the *title*.
+Certain special characters are automatically removed from the *title* and *description*.
 
 == Generating a new Gallery ==
 
@@ -29,6 +30,7 @@ Parameters:
   * oauth_nonce
   * response_format _(optional, default: JSON)_
   * title _(optional)_
+  * description _(optional)_
   
 
 Currently available response formats are:
@@ -48,7 +50,8 @@ Example *JSON* Response:
           "stat": "ok", 
            "gallery": {
                     "GID":"asdfqwertzuiqwerasdfqwertzuiqwer",
-                     "title":"This is just an example title."
+                     "title":"This is just an example title.",
+                     "description":"This is just an example description."
            }
      }
 }
@@ -103,7 +106,8 @@ $pvars   = array(
         
         // optional parameters
         "response_format" => "JSON",
-        "title" => "This is an example."
+        "title" => "This is an example.",
+        "description" =>"This is just an example description."
 );
 
 // initialize curl and set parameters
