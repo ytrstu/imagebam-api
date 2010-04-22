@@ -38,7 +38,7 @@ The signature is calculated out of following parameters:
   * oauth_nonce
   * oauth_token (not required when requesting a token)
 
-For the *request_token* method the *oauth_token* is naturally not required.
+For the *request_token* method the parameters *oauth_token* and *oauth_token_secret* are naturally not required.
 The *oauth_signature* is build by concatenating the parameters above in the given order and then calculating the MD5-checksum of the string:
 {{{
 oauth_signature = MD5(API-key + API-secret + oauth_timestamp + oauth_nonce)
@@ -46,7 +46,7 @@ oauth_signature = MD5(API-key + API-secret + oauth_timestamp + oauth_nonce)
 
 For all other requests the *oauth_token* is also used to build the *oauth_signature*:
 {{{
-oauth_signature = MD5(API-key + API-secret + oauth_timestamp + oauth_nonce + oauth_token)
+oauth_signature = MD5(API-key + API-secret + oauth_timestamp + oauth_nonce + oauth_token + oauth_token_secret)
 }}}
 
 
