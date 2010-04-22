@@ -13,7 +13,7 @@ Restrictions:
 
 == Uploading an Image ==
 
-Parameters:
+*Parameters*
   * oauth_consumer_key
   * oauth_token
   * oauth_signature_method
@@ -50,8 +50,8 @@ Parameters:
     * values:
       * JSON _(default)_
 
-You MUST provide the user the option to pick the *content_type*.
-
+You MUST provide the user the option to pick the *content_type*.<br>
+Please note that a maximum number of 500 images can be assigned to a gallery.
 
 The parameter *image* must be sent via POST method. All other parameters may be sent either via GET or POST method to following URL:
 {{{
