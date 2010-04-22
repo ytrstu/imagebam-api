@@ -40,14 +40,20 @@ http://www.imagebam.com/XXXX - will be posted when live
 
 If all parameters check out you will receive the response in the requested format.
 
-Example response:
+Example *JSON* Response:
 {{{
 {
-  "GID":"asdfqwertzuiqwerasdfqwertzuiqwer",
-  "title":"This is just an example title.",
-  "description":"This is an example description"
+     "rsp": {
+          "stat": "ok", 
+           "gallery": {
+                    "GID":"asdfqwertzuiqwerasdfqwertzuiqwer",
+                     "title":"This is just an example title.",
+                     "description":"This is an example description"
+           }
+     }
 }
 }}}
+
 
 The request can fail for the following reasons:
   * invalid OAuth authentication
