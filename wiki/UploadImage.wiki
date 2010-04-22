@@ -7,7 +7,7 @@
 
 With this method an image can be uploaded to a user's account.<br>
 Restrictions:
-  * 5MB maximum file size
+  * 4MB maximum file size
   * accepted formats: JPG, GIF, PNG
 
 
