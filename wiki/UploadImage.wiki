@@ -8,7 +8,7 @@
 With this method an image can be uploaded to a user's account.<br>
 Restrictions:
   * 5MB maximum file size
-  * accepted formats: JPEG, GIF, PNG
+  * accepted formats: JPG, GIF, PNG
 
 
 == Uploading an Image ==
@@ -28,7 +28,7 @@ Restrictions:
       * family
   * thumb_format - _(optional)_
     * values:
-      * JPEG _(default)_
+      * JPG _(default)_
       * GIF
   * thumb_size _(optional)_
     * values:
