@@ -1,0 +1,90 @@
+#summary upload an image to a user's account
+#labels Featured,Phase-Implementation
+
+= Upload an Image =
+
+== Introduction ==
+
+With this method an image can be uploaded to a user's account.<br>
+Restrictions:
+  * 5MB maximum file size
+  * accepted formats: JPEG, GIF, PNG
+
+
+== Uploading an Image ==
+
+Parameters:
+  * oauth_consumer_key
+  * oauth_token
+  * oauth_signature_method
+  * oauth_signature
+  * oauth_timestamp
+  * oauth_nonce
+  * image
+    * value: a binary image file
+  * content_type
+    * values:
+      * adult
+      * family
+  * thumb_format - _(optional)_
+    * values:
+      * JPEG _(default)_
+      * GIF
+  * thumb_size _(optional)_
+    * values:
+      * 100x100 _(default)_
+      * 150x150
+      * 180x180
+  * thumb_cropping _(optional)_
+    * values:
+      * 0 _(aspect ratio will be preserved)_
+      * 1 _(default - thumbnail will be cropped to a square)_
+  * thumb_info _(optional)_
+    * values:
+      * 0 _(default)_
+      * 1 _(information about the image size and resolution will be appended to the thumbnail)_
+  * gallery_id _(optional)_
+    * value:
+      * 32 character long alphanumeric string identifying a user's gallery 
+  * response_format  _(optional)_
+    * values:
+      * JSON _(default)_
+
+You MUST provide the user the option to pick the *content_type*.
+
+
+The parameter *image* must be sent via POST method. All other parameters may be sent either via GET or POST method to following URL:
+{{{
+http://www.imagebam.com/XXXX - will be posted when live
+}}}
+
+
+
+Example *JSON* Response:
+{{{
+{
+     "rsp": {
+          "stat": "ok", 
+           "image": {
+                    "ID":"asdffd1234",
+                    "URL":"http://www.imagebam.com/image/asdffd1234",
+                    "thumbnail":"http://thumbnails20.imagebam.com/123/asdffd1234.jpg"
+                    "GID":"asdfasdfasdfasdfasdfasdfasdfasdf"
+           }
+     }
+}
+}}}
+
+
+The request can fail for the following reasons:
+  * invalid OAuth authentication
+  * missing parameters
+  * invalid parameters
+  * invalid image size
+  * invalid image format
+  * image has been banned from ImageBam
+  * internal error
+
+In the case of an invalid OAuth authentication the response will be in the format required by the OAuth Core 1.0a.
+
+A documentation of the possible error-codes and error-messages is still a work in progress. 
