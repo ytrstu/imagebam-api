@@ -21,7 +21,7 @@ Restrictions:
   * oauth_timestamp
   * oauth_nonce
   * image
-    * value: a binary image file
+    * value: the file to be uploaded
   * content_type
     * values:
       * adult
@@ -49,6 +49,10 @@ Restrictions:
   * response_format  _(optional)_
     * values:
       * JSON _(default)_
+
+
+*ATTENTION*<br>
+Make that the image data is being posted correctly! (Content-Type: multipart/form-data)<br>
 
 You MUST provide the user the option to pick the *content_type*.<br>
 Please note that a maximum number of 500 images can be assigned to a gallery.
