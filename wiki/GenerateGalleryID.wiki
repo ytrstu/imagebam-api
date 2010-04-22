@@ -7,14 +7,14 @@
 
 A gallery consists of a minimum of 2 and a maximum of 500 images. The images are interlinked so that navigation to the previous or next image are easy steps for the viewer.
 
-Each gallery is identified by a unique ID (*GID*). The *GID* is a 32 character long, alphanumeric, non-case-sensitive string.
+Each gallery is identified by a unique ID (*GID*). The *GID* is a 32 character, alphanumeric, non-case-sensitive string.
 
-Each gallery has following parameters:
+Each gallery has the following parameters:
   * GID
   * title (max. length 100 characters)
   * description (max. length 500 characters)
 
-Certain special characters automatically removed from the *title* and *description*.
+Certain special characters are automatically removed from the *title* and *description*.
 
 == Generating a new Gallery ==
 
@@ -33,7 +33,7 @@ Parameters:
 Currently available response formats are:
   * JSON
 
-The above parameters should sent via GET or POST method to following URL:
+The above parameters should be sent via GET or POST method to following URL:
 {{{
 http://www.imagebam.com/XXXX - will be posted when live
 }}}
@@ -49,7 +49,7 @@ Example response:
 }
 }}}
 
-The request can fail for following reasons:
+The request can fail for the following reasons:
   * invalid OAuth authentication
   * other invalid parameters
 
