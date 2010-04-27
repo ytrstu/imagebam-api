@@ -5,10 +5,11 @@
 
 == Introduction ==
 
-With this method an image can be uploaded to a user's account.<br>
+With this method an image can be uploaded to a user's account.
+
 Restrictions:
-  * 4MB maximum file size
-  * accepted formats: JPG, GIF, PNG
+  * Max file size: 4MB
+  * Accepted formats: JPG, GIF, PNG
 
 
 == Uploading an Image ==
@@ -52,7 +53,7 @@ Restrictions:
 
 
 *ATTENTION*<br>
-Make that the image data is being posted correctly! (Content-Type: multipart/form-data)<br>
+Make sure that the image data is being posted correctly! (Content-Type: multipart/form-data)<br>
 
 You MUST provide the user the option to pick the *content_type*.<br>
 Please note that a maximum number of 500 images can be assigned to a gallery.
