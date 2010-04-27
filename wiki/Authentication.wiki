@@ -14,7 +14,7 @@ First of all you will need to register your application with ImageBam.
 
 _The URL wil be provided once the API goes live._
 
-Once you registered your application you will get an email containing:
+Once you have registered your application you will get an email containing:
   * your API-key
   * your API-secret
   * additional information
@@ -27,7 +27,7 @@ All parameters can either be sent via *GET* or *POST*. Please note that most par
 
 
 == Signing Requests ==
-Currently only *MD5* is accepted as signing method.
+Currently only *MD5* is accepted as a signing method.
 {{{
 oauth_signature_method=MD5
 }}}
@@ -38,8 +38,8 @@ The signature is calculated out of following parameters:
   * oauth_nonce
   * oauth_token (not required when requesting a token)
 
-For the *request_token* method the parameters *oauth_token* and *oauth_token_secret* are naturally not required.
-The *oauth_signature* is build by concatenating the parameters above in the given order and then calculating the MD5-checksum of the string:
+For the *request_token* method the parameters *oauth_token* and *oauth_token_secret* are not required.
+The *oauth_signature* is built by concatenating the parameters above in the given order and then calculating the MD5-checksum of the string:
 {{{
 oauth_signature = MD5(API-key + API-secret + oauth_timestamp + oauth_nonce)
 }}}
@@ -55,7 +55,7 @@ oauth_signature = MD5(API-key + API-secret + oauth_timestamp + oauth_nonce + oau
 How to request an unauthorized token is specified in the section 6.1 of the OAuth Core 1.0a.
 http://oauth.net/core/1.0a/#auth_step1
 
-Following parameters are required:
+The following parameters are required:
   * oauth_consumer_key
   * oauth_signature_method
   * oauth_signature
@@ -78,7 +78,7 @@ oauth_signature_method	MD5
 oauth_timestamp	        1271888656
 }}}
 
-If all parameters check out the answer includes following parameters:
+If all parameters check out the answer includes the following parameters:
   * oauth_token
   * oauth_token_secret
 
@@ -88,7 +88,7 @@ oauth_token             fYZ8IKDtWznm5BatSTZKz4CrWakPodgf
 oauth_token_secret      WJi1lruekuYTxAkg
 }}}
 
-If the parameters are not correct you will receive sufficient information in order to address the error.
+If the parameters are not correct you will receive sufficient information to address the error.
 
 
 
@@ -100,7 +100,8 @@ The user should be sent to following URL:
 {{{
 http://www.imagebam.com/XXXXX - will be provided when live
 }}} 
-Following parameter must be passed allong:
+
+The following parameter must be passed along:
   * oauth_token
 
 The user will be given certain information about your application and can choose to either accept or decline to give your application the required rights.
@@ -142,14 +143,14 @@ oauth_token             fYZ8IKDtWznm5BatSTZKz4CrWakPodgf
 oauth_token_secret      RH58X8vRXF7GXKe9
 }}}
 
-If the parameters are not correct you will receive sufficient information in order to address the error.
+If the parameters are not correct you will receive sufficient information to address the error.
 
 == Accessing Protected Resources ==
 
 You now have access to the user's 'protected resources' and are able to do following:
   * upload images
   * generate a new gallery ID
-  * request list of available galleries
+  * request a list of available galleries
 
 If needed following functionalities might be included in the future:
   * delete images
@@ -157,7 +158,7 @@ If needed following functionalities might be included in the future:
   * change title and description of galleries
   * get a list of images stored in the user's account 
 
-With each request following parameters must be passed along:
+With each request the following parameters must be passed along:
   * oauth_consumer_key
   * oauth_token
   * oauth_signature_method
