@@ -66,7 +66,7 @@ The parameter *oauth_callback* is currently not supported.
 
 The parameters must be sent via POST or GET method to following URL:
 {{{
-http://www.imagebam.com/XXXXXX - will be provided when live
+http://www.imagebam.com/sys/oauth/request_token
 }}}
 
 Example POST/GET values:
@@ -98,7 +98,7 @@ In order to exchange the _unauthorized token_ for an _access token_ the user mus
 
 The user should be sent to following URL:
 {{{
-http://www.imagebam.com/XXXXX - will be provided when live
+http://www.imagebam.com/sys/oauth/authorize_token
 }}} 
 
 The following parameter must be passed along:
@@ -128,7 +128,7 @@ Following parameters are required:
 
 The above parameters must be sent vie GET or POST method to following URL:
 {{{
-http://www.imagebam.com/XXXXX - will be provided when live
+http://www.imagebam.com/sys/oauth/request_access_token
 }}}
 
 If all parameters check out the answer includes following parameters:
@@ -226,7 +226,7 @@ $pvars   = array(
         "oauth_nonce" => $oauth_nonce
 );
 
-$response = oauth_request('http://www.imagebam.com/URL-PROVIDED-WHEN-READY/request_token', $pvars);
+$response = oauth_request('http://www.imagebam.com/sys/oauth/request_token', $pvars);
 if($response == false)
     die('OAuth error: '.$response);
     
