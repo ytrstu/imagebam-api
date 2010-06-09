@@ -38,7 +38,7 @@ Currently available response formats are:
 
 The above parameters should be sent via GET or POST method to following URL:
 {{{
-http://www.imagebam.com/XXXX - will be posted when live
+http://www.imagebam.com/sys/API/resource/create_gallery
 }}}
 
 If all parameters check out you will receive the response in the requested format.
@@ -113,7 +113,7 @@ $pvars   = array(
 
 // initialize curl and set parameters
 $curl    = curl_init();
-curl_setopt($curl, CURLOPT_URL, 'http://www.imagebam.com/XXXX - will be posted when live');
+curl_setopt($curl, CURLOPT_URL, 'http://www.imagebam.com/sys/API/resource/create_gallery');
 curl_setopt($curl, CURLOPT_TIMEOUT, 30);
 curl_setopt($curl, CURLOPT_POST, 1);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $pvars);
