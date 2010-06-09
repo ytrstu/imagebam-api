@@ -60,7 +60,7 @@ Please note that a maximum number of 500 images can be assigned to a gallery.
 
 The parameter *image* must be sent via POST method. All other parameters may be sent either via GET or POST method to following URL:
 {{{
-http://www.imagebam.com/XXXX - will be posted when live
+http://www.imagebam.com/sys/API/resource/upload_image
 }}}
 
 
@@ -143,7 +143,7 @@ $pvars   = array(
 
 // initialize curl and set parameters
 $curl    = curl_init();
-curl_setopt($curl, CURLOPT_URL, 'http://www.imagebam.com/XXXX - will be posted when live');
+curl_setopt($curl, CURLOPT_URL, 'http://www.imagebam.com/sys/API/resource/upload_image');
 curl_setopt($curl, CURLOPT_TIMEOUT, 30);
 curl_setopt($curl, CURLOPT_POST, 1);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $pvars);
