@@ -12,7 +12,7 @@ Please read following guide provided by OAuth before continuing: http://oauth.ne
 == API Registration ==
 First of all you will need to register your application with ImageBam.
 
-_The URL wil be provided once the API goes live._
+http://www.imagebam.com/sys/API/clients
 
 Once you have registered your application you will get an email containing:
   * your API-key
