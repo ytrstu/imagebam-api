@@ -92,7 +92,22 @@ The request can fail for the following reasons:
 
 In the case of an invalid OAuth authentication the response will be in the format required by the OAuth Core 1.0a.
 
-A documentation of the possible error-codes and error-messages is still a work in progress. 
+==Error Codes==
+  * _100_ - no image was uploaded or the upload failed
+  * _101_ - image size exceeds 4MB or file type not accepted
+  * _102_ - image has been banned from ImageBam
+  * _102_ - invalid or missing parameter: content_type
+  * _103_ - invalid parameter: thumb_format
+  * _104_ - invalid parameter: thumb_size
+  * _105_ - invalid parameter: thumb_cropping
+  * _106_ - invalid parameter: thumb_info
+  * _107_ - invalid parameter: gallery_id
+  * _108_ - permission denied: gallery_id
+  * _109_ - gallery contains maximum of 500 images
+  * _110_ - invalid parameter: response_format
+  * _111_ - an internal error has occurred
+
+
 
 
 ==Example Code==
