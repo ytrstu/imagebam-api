@@ -36,6 +36,7 @@ Restrictions:
       * 100x100 _(default)_
       * 150x150
       * 180x180
+      * 350x350
   * thumb_cropping _(optional)_
     * values:
       * 0 _(aspect ratio will be preserved)_
